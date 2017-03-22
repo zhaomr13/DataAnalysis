@@ -1,0 +1,14 @@
+\contentsline {part}{I\hspace {1em}注记}{1}{part.1}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {section}{\numberline {2}Ray}{1}{section.2}
+\contentsline {section}{\numberline {3}对称变换}{1}{section.3}
+\contentsline {section}{\numberline {4}对称表示定理(The Symmetry Representation Theorem)}{2}{section.4}
+\contentsline {section}{\numberline {5}变换}{2}{section.5}
+\contentsline {subsection}{\numberline {5.1}被动变换}{2}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}经典标量场}{2}{subsubsection.5.1.1}
+\contentsline {subsection}{\numberline {5.2}主动变换}{3}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}经典标量场}{3}{subsection.5.3}
+\contentsline {section}{\numberline {6}\ensuremath {\textbf {C}}变换}{3}{section.6}
+\contentsline {section}{\numberline {7}\ensuremath {\textbf {P}}变换}{3}{section.7}
+\contentsline {section}{\numberline {8}\ensuremath {\textbf {T}}变换}{4}{section.8}
+\contentsline {part}{II\hspace {1em}习题与解答}{4}{part.2}

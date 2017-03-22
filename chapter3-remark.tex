@@ -1,0 +1,113 @@
+\section{Introduction}
+第三章讨论了非相对论量子力学中的\C \P \T 的问题，我的注记包括CPV一书和井樱,以及Weinberg书中的内容
+
+\section{Ray}
+Weinberg给出了量子力学中Ray的概念
+Ray表示一组量子态的集合，它们相差一个相位，我们把只有一个相位差的态看作是物理上不可区分的。
+
+\section{对称变换}
+对称变换的意思是不改变实验结果的变换。如果观察者$O$看到的态可以表示为$R$,$R_1$,$R_2$,观察者$O^\prime$可以表示为
+$R^\prime$,$R_1^\prime$，$R_2^\prime$，两个观察者必须能看到相同的概率
+\begin{equation}
+    P(R\rightarrow R_n) = P(R^\prime\rightarrow R_n^\prime)
+\end{equation}
+
+应该注意到的是，这个要求是一个对称变换的唯一要求，这也是对量子力学中可观测概念的另一个印证。
+Wigner的对称表示定理给出，一个对称变化或者是线性幺正算符，或者是反幺正算符
+在讨论到反幺正算符的时候，我们这样定义我们的态和变换：
+\begin{equation}
+    \overrightarrow A\ket{\psi} = A\ket{\psi}
+\end{equation}
+\begin{equation}
+    \bra{\psi}A = \bra{\psi}\overleftarrow A = (A\ket{\psi})^\dagger
+\end{equation}
+用这种记号，我们将两个态的内积可以定义为
+\begin{align}
+    \braket{\psi A}{A\psi} &= \braket{\phi}{\psi} \\
+    A(\xi\ket{\phi} + \eta\ket{\psi}) &= \xi A\ket{\phi} + \eta A\ket{\psi}
+\end{align}
+反幺正反线性算符可以定义为
+\begin{align}
+    \braket{\phi A}{A\phi} &= \braket{\phi}{\psi} \\
+    A(\xi\ket{\phi} +\eta\ket{\psi}) &= \xi^* A\ket{\phi} + \eta^* A\ket{\psi}
+\end{align}
+
+我们用$T$来表示Ray之间的变换，$U = U(T)$表示态之间的变换。
+考虑这样一个变化
+$T$应该形成一个群。
+\begin{equation}
+    U(T_1)U(T_2)\ket{\phi_n} = e^{i\phi_n(T_1, T_2)}U(T_2T_1)\ket{\phi_n}
+\end{equation}
+考虑态
+\begin{equation}
+    \ket{\psi_{AB}} = \ket{\psi_A} + \ket{\psi_B}
+\end{equation}
+那么，
+\begin{align}
+    e^{i\phi_{AB}}U(T_1T_2)\ket{\psi_{AB}} &= U(T_1)U(T_2)(\ket{\psi_A} + \ket{\psi_B}) \\
+&= U(T_1)U(T_2)(\ket{\psi_A} + \ket{\psi_B}) \\
+&= e^{i\phi_A}U(T_2T_1)\ket{\psi_A} + e^{i\phi_B}U(T_2T_1)\ket{\psi_B} 
+\end{align}
+由此可得
+\begin{equation}
+e^{i\phi_{AB}}(\ket{\psi_A} + \ket{\psi_B})
+= e^{i\phi_A}\ket{\psi_A} + e^{i\phi_B}\ket{\psi_B}
+\end{equation}
+因此，只有在$\phi_{AB} = \psi_A = \psi_B$时才能成立。
+
+
+
+\section{对称表示定理(The Symmetry Representation Theorem)}
+定理：任意对称变换可以用Hiblert空间中的一个线性幺正算符或反线性反幺正算符表示
+
+\section{变换}
+先尝试用主动与被动的观点阐述变换的问题
+\subsection{被动变换}
+在我看来，被动变换的表述是更加简单的
+\subsubsection{经典标量场}
+在$O$参考系下，场$\phi$可以用$\phi = \phi(x)$表述，我们将转换到参考系$\bar{O}$，为了与之后讨论的主动变换结论一致，我们希望参考系之间的变换为$O^\prime = \Lambda O$，其中$\Lambda$表示一个Lorentz变换，由于$Lorentz$变换形成一个群，所以我们取$\Lambda$或者$\Lambda^{-1}$并不是太有关系。在新的参考系中，场$\phi$应该表示为$\bar \phi(\bar x)$，事实上，$phi$和$\bar \phi$表示的是同一个点，如果在$x$处$\phi$可以渠道极致，那么对应地，$\bar \phi$也应该在$\bar x$处取到极值。即应该有$\phi(x) = \bar\phi(\bar x)$。带入$\bar x = \Lambda^{-1} x$，应该有
+\begin{equation}
+    \bar\phi(\bar x) = \phi(x) = \phi(\Lambda \bar x)
+\end{equation}
+可以记为
+\begin{equation}
+    U\phi(x) = \bar\phi(x) = \phi(\Lambda x)
+\end{equation}
+
+\subsection{主动变换}
+\subsection{经典标量场}
+让场做一个$\Lambda$的Lorentz变换，于是，原来在$x$处的值就变成了$\Lambda x$处的值。
+即
+\begin{equation}
+    \bar phi(\Lambda) = \phi(x)
+\end{equation}
+
+在后面的章节里面，我们将仔细讨论用$\UC,\invUC$等符号表示态变换，而用$\C \P$等表示对算符的变换，应该注意到，$\UC,\invUC$等的意义是确定性的，而$\C,\P$等符号的意义取决于对应的算符，在非相对论量子力学中，我们关心的主要是在$\UC,\invUC$等对态变换的作用下态变换的形式，在第4章中，我们会对算符的变换做进一步的讨论。
+
+\section{\C 变换}
+电荷共轭变换在非相对论量子力学不容易给出,讨论电荷共轭变化，必须考虑电磁场
+
+讨论含电磁场的拉式量
+\begin{equation}
+H = \frac{|\vec P|^2}{2m} - \frac e{2mc}[\vec A \cdot \vec P + \vec P \cdot \vec A] + \frac{e^2}{2mc^2}\vec A^2 + e\phi
+\end{equation}
+做下面的变换后，哈密顿算符是不变的：
+\begin{equation}
+    e\rightarrow-e, \vec A \rightarrow -\vec A, \phi\rightarrow -\phi
+\end{equation}
+同时，$\vec P$以及$\vec X$是不变的。
+因此，我们应该将\C 定义为使得系统的$e,A,\phi$反号的变换。
+显然有$\C^2 = 1$实际上，\C 变换的定义比较复杂，需要在有Dirac方程的时候做进一步的讨论。
+\section{\P 变换}
+在量子力学中讨论\P 变换，\P 变换将右手参考系变换为左手参考系。
+将量子力学的态$\ket{\alpha}$转化为$\ket{\alpha}\rightarrow\P\ket{\alpha}$
+位置算符的平均值应该有
+\begin{equation}
+    \bra{\alpha}\invUP\vec x \UP\ket{\alpha} = - \bra{\alpha}\vec x\ket{\alpha}
+\end{equation}
+因此应该有
+\begin{equation}
+    \UP x\invUP = -x
+\end{equation}
+\section{\T 变换}
+

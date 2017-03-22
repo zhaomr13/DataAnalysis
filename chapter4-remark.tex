@@ -1,0 +1,295 @@
+\section{Introduction}
+本章给出了在相对论性量子理论中的\C \P \T 定义。
+包括场的量子化等
+
+\section{记号}
+在这个注中，我使用与书中不同的记号来写注记
+
+自然单位制
+\begin{equation}
+    c = \hbar = 1
+\end{equation}
+
+度规
+\begin{equation}
+    \cocovector g \mu \nu = \mathrm{diag}[-1, 1, 1, 1]
+\end{equation}
+
+坐标
+\begin{equation}
+    \bivector x \mu = (t, \vec x)
+\end{equation}
+
+\begin{equation}
+    \covector x \mu = (-t, \vec x)
+\end{equation}
+
+能动量
+\begin{equation}
+    \bivector p \mu = (E, \vec p)
+\end{equation}
+
+\begin{equation}
+    \covector p \mu = (-E, \vec p)
+\end{equation}
+
+偏导数
+\begin{equation}
+    \bivector \partial \mu = \frac \partial {\partial \covector x \mu}
+\end{equation}
+
+\begin{equation}
+    \covector \partial \mu = \frac \partial {\partial \bivector x \mu}
+\end{equation}
+
+\begin{equation}
+    \bivector p \mu = -i \bivector \partial \mu
+\end{equation}
+
+Dirac matrices
+\begin{equation}
+    \diracgamma 5 = i \diracgamma 0 \diracgamma 1 \diracgamma 2 \diracgamma 3 \diracgamma 4
+\end{equation}
+
+%\section{自由场}
+
+\section{Spin-0场的量子化及其\C \P \T}
+\subsection{实标量场量子化}
+为了讨论复标量场，不妨先从实标量场入手
+
+把Klein-Gordon场方程的解展开
+\begin{equation}
+    \begin{array}{lll}
+        \phi(t, \vec x) &=&\displaystyle \int \VolumeUnit k \omega \left[ a(k) e^{i\vec k \cdot \vec x - \i\omega_k t} + a^*(k)e^{-i\vec k \cdot \vec x + i \omega_k t} \right] \\
+        &\equiv& \displaystyle\int d^3\vec k \left[a(k)f_k(x) + a^*(k)f_k^*(x)\right]
+    \end{array}
+\end{equation}
+量子化过程即将上式写成算符
+\begin{equation}
+    \begin{array}{lll}
+        \phi(t, \vec x) &=& \displaystyle\int \VolumeUnit k \omega \left[ a(k) e^{i\vec k \cdot \vec x - \i\omega_k t} + a^\dagger(k)e^{-i\vec k \cdot \vec x + i \omega_k t} \right] \\
+        &\equiv& \displaystyle\int d^3\vec k \left[a(k)f_k(x) + a^\dagger(k)f_k^\dagger(x)\right]
+    \end{array}
+\end{equation}
+同时，正则动量可以求出
+\begin{equation}
+    \begin{array}{lll}
+        \pi(t, \vec x) &=& \dot \phi(t, x) = \displaystyle\int \VolumeUnit k \omega \left[ i\omega_k a(k) e^{i\vec k \cdot \vec x - \i\omega_k t} - i\omega_k a^\dagger(k)e^{-i\vec k \cdot \vec x + i \omega_k t} \right] \\
+        &\equiv& \displaystyle\int d^3\vec k = \left[a(k)f_k(x) + a^\dagger(k)f_k^\dagger(x)\right]
+    \end{array}
+    \end{equation}
+
+    可以推出
+    \begin{equation}
+        a(k) = i \int d^3 \vec x f_k^*\partial_0\phi
+    \end{equation}
+    \begin{equation}
+        a^\dagger(k) = -i \int d^3 \vec x f_k\partial_0\phi
+    \end{equation}
+    为了保持洛仑兹协变性
+    \begin{equation}
+    \ket {\vec k} = \sqrt{(2\pi)^32E_{\vec k)}} a^\dagger(\vec k)\ket{0}
+\end{equation}
+
+\subsection{复标量场量子化}
+讨论量子化的复标量场
+\begin{equation}
+    \phi(t, x) = \frac 1  2 [\phi_1(t, x) + i\phi_2(t, x)]
+\end{equation}
+
+可以量子化为
+\begin{equation}
+    \phi(x) = \int \VolumeUnit k \omega \left[a_+(k)e\right]
+\end{equation}
+
+\subsection{标量场的\C \P \T}
+\subsubsection{\C 变换}
+将复标量场的\C 变换定义为
+\begin{equation}
+    \UC\phi(x)\invUC = \eta_C\phi^\dagger(x)
+\end{equation}
+取复共轭可得
+\begin{equation}
+    \UC a_{vec k}\invUC = \eta_C b_{\vec k}
+\end{equation}
+带入$\phi$的表达式可得,
+\begin{equation}
+    \begin{array}{lll}
+        \UC a_{\vec k} \invUC &=& \eta_C b_{\vec k} \\
+        \UC a_{\vec k}^\dagger \invUC &=& \eta_C^* b_{\vec k}^\dagger \\
+        \UC b_{\vec k} \invUC &=& \eta_C^* a_{\vec k} \\
+        \UC b_{\vec k}\dagger \invUC &=& \eta_C a_{\vec k}^\dagger \\
+    \end{array}
+\end{equation}
+对于实标量场，可得
+\begin{equation}
+    \eta_C = \pm 1
+\end{equation}
+\subsubsection{\P 变换}
+\P 变换表示将坐标变换为
+\begin{equation}
+    \vec x \rightarrow \vec x^\prime = -\vec x
+\end{equation}
+在\P 变换下，复标量场的变化就应该是
+\begin{equation}
+    \UP\phi(t,\vec x)\invUP = \eta_P\phi(t,-\vec x)
+\end{equation}
+\begin{equation}
+    \UP\phi\dagger(t,\vec x)\invUP = \eta_P^*\phi\dagger(t,-\vec x)
+\end{equation}
+同样，对于实标量场
+\begin{equation}
+    \eta_P = \pm 1
+\end{equation}
+其符号是可进行观测的
+如何进行观测？
+\subsubsection{\T 变换}
+为了讨论\T 变换，先看经典量在\T 变换下的性质
+$E_{\vec p}\rightarrow E_{\vec p}, \vec p\rightarrow \vec p, \vec s\rightarrow-\vec s $
+
+在高等量子力学中仔细地讨论了波函数的时间反演问题，经典Klein-Golden场的时间反演应该表示为
+\begin{equation}
+    \phi(t, x) \rightarrow \phi(t, x)^{\prime} = \eta_T\phi(-t, x)^*
+\end{equation}
+在场量子化之后，变为
+\begin{equation}
+    \UT\phi(t,\vec x)\invUT = \eta_T\phi(-t, x)
+\end{equation}
+可以求得产生湮灭算符的变换关系
+\begin{equation}
+    \begin{array}{lll}
+        \UT a_{\vec k}\invUT &=& \eta_T a_{-\vec k} \\
+        \UT b_{\vec k}\invUT &=& \eta_T^* a_{-\vec k} \\
+        \UT a_{\vec k}^\dagger\invUT &=& \eta_T a_{-\vec k}^\dagger \\
+        \UT b_{\vec k}^\dagger\invUT &=& \eta_T^* a_{-\vec k}^\dagger \\
+    \end{array}
+\end{equation}
+
+%为了讨论\T 变换，先写出Schrodinger方程
+%\begin{equation}
+    %H\ket{\psi} = i\hbar\frac \partial {\partial t} \ket{\psi}
+%\end{equation}
+%此处的\ket{t}与表象有关，当作波函数对待
+%先尝试一种错误的\C 变换方法:
+%\tilde H = \UT H \invUT
+%\tilde 
+
+\section{自由Dirac场的量子化}
+dirac方程对应的拉式量密度为
+\begin{equation}
+    L = \bar \psi(i\diracslash \partial - m)\psi = 0
+\end{equation}
+注意到这里的$\diracslash \partial$是作用在右边的，$\bar \psi$和$\psi$的地位实际上并不等同。
+正则动量
+\begin{equation}
+    \psi_\alpha = \frac {\partial L} {partial \dot{\psi_alpha}} = i\psi_\alpha^\dagger
+\end{equation}
+\begin{equation}
+    H = \pi \dot{\psi} - L = \psi^\dagger(-i\vec \alpha \cdot \vec \nabla + \beta m)\psi
+\end{equation}
+场方程按平面波展开为
+\begin{equation}
+    \psi(x) = \int \VolumeUnit p E \sum_{\pm s} \left[b(p, s)u(p, s)e^{-ipx} + d^dagger(p,s)v(p,s)e^{+ipx}\right]
+\end{equation}
+
+\subsection{自由Dirac场的\C \P \T}
+\subsection{\C 变换}
+在Dirac场中，可以定义
+\begin{equation}
+    \UC \psi(x) \invUC = \eta_C \C \bar \psi^T(x)
+\end{equation}
+这个定义的实际意思应该解释为
+\begin{equation}
+    \begin{array}{lll}
+        \UC b_{\vec k}^s\invUC &=& \eta_C d_{\vec k}^s \\
+        \UC b_{\vec k}^{s\dagger}\invUC &=& \eta_C d_{\vec k}^s \\
+        \UC b_{\vec k}^s\invUC &=& \eta_C d_{\vec k}^s \\
+        \UC b_{\vec k}^s\invUC &=& \eta_C d_{\vec k}^s \\
+    \end{array}
+\end{equation}
+
+Dirac场的双线性项在\C 变换下变化规律如下
+\begin{table}[h]
+    \caption{Dirac场的双线性项变化}
+    \centering
+    \begin{tabular}{cccccc}
+        & $\bar \psi$ & $\bar \psi \covector \gamma \mu \psi$ & $\bar \psi \covector \gamma \mu \covector \gamma \nu \psi$ &
+        $\bar \psi \diracGamma \mu \diracGamma 5 \psi$ & $\bar \psi \diracGamma 5 \psi$ \\
+        $\eta_C$ & +1 & -1 & -1 & +1 & +1
+    \end{tabular}
+\end{table}
+
+\subsection{\P 变换}
+Dirac波函数在宇称变换下应该表示为
+\begin{equation}
+    \Psi(t, \vec x) \rightarrow \Psi^\prime(t, \vec x) = \eta_P \diracGamma 0 \Psi(t, -\vec x)
+\end{equation}
+因此在Dirac场算符的情况下，
+应该有
+\begin{equation}
+    \UP \Psi_\alpha(t, \vec x) \invUP = \eta_P \diracgamma{0}_{\alpha\beta} \Psi_\beta(t, -\vec x)
+\end{equation}
+
+于是可以得到
+
+\subsection{\T 变换}
+
+
+
+\section{电磁场的量子化及其\C \P \T}
+Maxwell 方程组可以写作
+\begin{equation}
+    \covector \partial \mu \bibivector F \mu \nu = e \bivector J \nu
+\end{equation}
+其中
+\begin{equation}
+    \bibivector F \mu \nu = 
+    \bibivector F \mu \nu \equiv \bivector \partial \mu \bivector A \nu 
+    - \bivector \partial \nu \bivector A \mu
+\end{equation}
+
+\begin{equation}
+    L = \frac 1 4 
+\end{equation}
+由于规范问题，电动力学不能直接量子化，采用库仑规范
+\begin{equation}
+    \
+\end{equation}
+
+那么，$\vec A$的正则动量就是：
+\begin{equation}
+    \vec \Pi(t, \vec x) = 
+    -\frac \partial {\partial t} \vec A (t, \vec x) - \vec \nabla A_0 = \vec E
+\end{equation}
+
+
+\section{有质量spin-1场的量子化及其\C \P \T}
+拉式量可以写作
+\begin{equation}
+    L = - \frac 1 4 \bibivector F \mu \nu \cocovector F \mu \nu + \frac 1 2 m^2 \covector A \mu \bivector A \mu
+\end{equation}
+可以得到Proca方程
+\begin{equation}
+    \covector \partial \mu \bibivector F \mu nu + m^2 \bivector A \nu = 0
+\end{equation}
+有质量矢量场应该有3个独立的分量
+引入拉式乘子
+\begin{equation}
+    L = -\frac 1 4 \cocovector F \mu \nu \cocovector F \mu \nu + \frac 1 2 m^2 \covector A \mu \bivector A \mu - \frac \xi 2 (\bivector \partial \mu \cocovector A \mu)^2
+\end{equation}
+运动方程可以得到
+\begin{equation}
+    \xi()
+\end{equation}
+
+\section{\C \P 变换的相因子问题}
+在\C 和\P 变换中，有一个不可观测的相因子
+\begin{equation}
+\UP\psi(t, \vec x)\invUP = \eta^P\diracgamma 0\psi(t, -\vec x)
+\end{equation}
+
+\begin{equation}
+    \UC\psi(t, \vec x)\invUC = \eta_C\C \bar\psi^T(t. -\vec x)
+\end{equation}
+
+通过定义的调整，我们定义$p n e$的内秉宇称为1
